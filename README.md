@@ -37,6 +37,6 @@ cd FlowmodoroiOS
 ```bash
 make simulator
 ```
-> Note: Running `make` on it's own will try to run the app on personal device (connected by USB or through Wi-Fi), this may or may not work as it requires a developer certificate to be installed on the phone. It may also require the device to be logged into my iCloud account.
+> NOTE: Running `make` on it's own will try to run the app on personal device (connected by USB or through Wi-Fi), this may or may not work as it requires a developer certificate to be installed on the phone. It may also require the device to be logged into my iCloud account.
 
 
