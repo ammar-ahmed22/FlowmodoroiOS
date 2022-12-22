@@ -11,6 +11,14 @@
 		A0B1D2BB2951F22500CD0F44 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2BA2951F22500CD0F44 /* ContentView.swift */; };
 		A0B1D2BD2951F22A00CD0F44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B1D2BC2951F22A00CD0F44 /* Assets.xcassets */; };
 		A0B1D2C12951F22A00CD0F44 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B1D2C02951F22A00CD0F44 /* Preview Assets.xcassets */; };
+		A0B1D2C92951F28800CD0F44 /* FiraCode-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0B1D2C82951F28800CD0F44 /* FiraCode-VariableFont.ttf */; };
+		A0B1D2CF29520CDB00CD0F44 /* TimeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2CE29520CDB00CD0F44 /* TimeDisplay.swift */; };
+		A0B1D2D22952457500CD0F44 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2D12952457400CD0F44 /* TimerView.swift */; };
+		A0B1D2D4295250ED00CD0F44 /* WorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2D3295250ED00CD0F44 /* WorkView.swift */; };
+		A0B1D2D629525C2200CD0F44 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2D529525C2200CD0F44 /* ControlsView.swift */; };
+		A0B1D2D829526CA100CD0F44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2D729526CA100CD0F44 /* Constants.swift */; };
+		A0B1D2DA29526FA300CD0F44 /* BreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2D929526FA300CD0F44 /* BreakView.swift */; };
+		A0B1D2DC2952804B00CD0F44 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1D2DB2952804B00CD0F44 /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,15 @@
 		A0B1D2BC2951F22A00CD0F44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B1D2BE2951F22A00CD0F44 /* Flowmodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Flowmodoro.entitlements; sourceTree = "<group>"; };
 		A0B1D2C02951F22A00CD0F44 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0B1D2C82951F28800CD0F44 /* FiraCode-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraCode-VariableFont.ttf"; sourceTree = "<group>"; };
+		A0B1D2CA2951F29500CD0F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0B1D2CE29520CDB00CD0F44 /* TimeDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDisplay.swift; sourceTree = "<group>"; };
+		A0B1D2D12952457400CD0F44 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		A0B1D2D3295250ED00CD0F44 /* WorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkView.swift; sourceTree = "<group>"; };
+		A0B1D2D529525C2200CD0F44 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		A0B1D2D729526CA100CD0F44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A0B1D2D929526FA300CD0F44 /* BreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakView.swift; sourceTree = "<group>"; };
+		A0B1D2DB2952804B00CD0F44 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,10 @@
 		A0B1D2B72951F22500CD0F44 /* Flowmodoro */ = {
 			isa = PBXGroup;
 			children = (
+				A0B1D2D02952455900CD0F44 /* Views */,
+				A0B1D2CD29520CCC00CD0F44 /* Utils */,
+				A0B1D2CA2951F29500CD0F44 /* Info.plist */,
+				A0B1D2C72951F27A00CD0F44 /* Fonts */,
 				A0B1D2B82951F22500CD0F44 /* FlowmodoroApp.swift */,
 				A0B1D2BA2951F22500CD0F44 /* ContentView.swift */,
 				A0B1D2BC2951F22A00CD0F44 /* Assets.xcassets */,
@@ -67,6 +88,35 @@
 				A0B1D2C02951F22A00CD0F44 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0B1D2C72951F27A00CD0F44 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A0B1D2C82951F28800CD0F44 /* FiraCode-VariableFont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A0B1D2CD29520CCC00CD0F44 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0B1D2CE29520CDB00CD0F44 /* TimeDisplay.swift */,
+				A0B1D2D729526CA100CD0F44 /* Constants.swift */,
+				A0B1D2DB2952804B00CD0F44 /* LocalStorage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0B1D2D02952455900CD0F44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0B1D2D12952457400CD0F44 /* TimerView.swift */,
+				A0B1D2D3295250ED00CD0F44 /* WorkView.swift */,
+				A0B1D2D529525C2200CD0F44 /* ControlsView.swift */,
+				A0B1D2D929526FA300CD0F44 /* BreakView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B1D2C12951F22A00CD0F44 /* Preview Assets.xcassets in Resources */,
+				A0B1D2C92951F28800CD0F44 /* FiraCode-VariableFont.ttf in Resources */,
 				A0B1D2BD2951F22A00CD0F44 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B1D2DC2952804B00CD0F44 /* LocalStorage.swift in Sources */,
+				A0B1D2D629525C2200CD0F44 /* ControlsView.swift in Sources */,
 				A0B1D2BB2951F22500CD0F44 /* ContentView.swift in Sources */,
+				A0B1D2DA29526FA300CD0F44 /* BreakView.swift in Sources */,
+				A0B1D2D4295250ED00CD0F44 /* WorkView.swift in Sources */,
+				A0B1D2CF29520CDB00CD0F44 /* TimeDisplay.swift in Sources */,
+				A0B1D2D22952457500CD0F44 /* TimerView.swift in Sources */,
 				A0B1D2B92951F22500CD0F44 /* FlowmodoroApp.swift in Sources */,
+				A0B1D2D829526CA100CD0F44 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +327,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flowmodoro/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +366,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Flowmodoro/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

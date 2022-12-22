@@ -7,15 +7,26 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @State private var selectedTab: Int = 1
+    
+    var body : some View {
+        TabView(selection: $selectedTab){
+            WorkView(selectedTab: $selectedTab)
+                .tabItem(){
+                    Image(systemName: "briefcase.fill")
+                    Text("Work")
+                }
+                .tag(1)
+            BreakView(selectedTab: $selectedTab)
+                .tabItem(){
+                    Image(systemName: "bed.double.fill")
+                    Text("Break")
+                }
+                .tag(2)
         }
-        .padding()
+//        WorkView()
     }
 }
 
