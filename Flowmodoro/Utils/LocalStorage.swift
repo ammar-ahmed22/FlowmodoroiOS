@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum LSKey: String, CaseIterable {
-    case workTime
+    case workTime, breakStarted
     func value() -> String { self.rawValue }
 }
 

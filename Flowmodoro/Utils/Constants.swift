@@ -40,6 +40,8 @@ extension Font.TextStyle {
 
 extension Color{
     static let bg = Color("background")
+    static let brandDarkBlue = Color("brandDarkBlue")
+    static let brandLightBlue = Color("brandLightBlue")
 }
 
 enum LocalStorageKeys: String {

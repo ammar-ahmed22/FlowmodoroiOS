@@ -10,6 +10,7 @@ import SwiftUI
 struct ControlsView: View {
     var isStarted: Bool
     var isBreak: Bool
+    var canBreak: Bool
     let resetAction: () -> Void
     let startAction: () -> Void
     let navigateAction: () -> Void
@@ -39,7 +40,7 @@ struct ControlsView: View {
                         .imageScale(.large)
                         .foregroundColor(.accentColor)
                 }
-            )
+            ).disabled(!canBreak)
         }
         .padding(.top, 5.0)
         

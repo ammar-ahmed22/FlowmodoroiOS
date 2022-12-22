@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WorkView : View {
     @Binding var selectedTab: Int
+    @EnvironmentObject var env: Environment
     @State private var isStarted: Bool = false
     @State private var elapsed: Int = 0
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -20,6 +21,7 @@ struct WorkView : View {
         isStarted = false
         timer.upstream.connect().cancel()
         elapsed = 0
+        env.canBreak = false
     }
     
     func handleStart(){
@@ -36,8 +38,9 @@ struct WorkView : View {
     func handleNavigate(){
         print("navigate handler")
         localStorage.saveValue(forKey: .workTime, value: elapsed)
-        handleReset()
+        env.workTime = elapsed
         selectedTab = 2
+        // handleReset()
     }
     
     var body: some View {
@@ -47,12 +50,14 @@ struct WorkView : View {
             VStack{
                 Text("Work Mode")
                     .font(.smallTitle)
+                    .fontWeight(.bold)
                     .padding(.bottom)
                     .foregroundColor(.accentColor)
                 TimerView(elapsed: elapsed)
                 ControlsView(
                     isStarted: isStarted,
                     isBreak: false,
+                    canBreak: env.canBreak,
                     resetAction: handleReset,
                     startAction: handleStart,
                     navigateAction: handleNavigate
@@ -63,6 +68,10 @@ struct WorkView : View {
                 if (isStarted){
                     elapsed += 1
                 }
+                
+                if (elapsed >= 10){
+                    env.canBreak = true
+                }
             }
             .onAppear{
                 timer.upstream.connect().cancel()
@@ -72,6 +81,7 @@ struct WorkView : View {
                 if newValue == 2{ // switching to break tab
                     print("switching to break, elapsed: \(elapsed)")
                     localStorage.saveValue(forKey: .workTime, value: elapsed)
+                    env.workTime = elapsed
                     handleReset()
                 }
             }

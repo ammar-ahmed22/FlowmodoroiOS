@@ -9,8 +9,11 @@ import SwiftUI
 
 struct BreakView : View {
     @Binding var selectedTab: Int
+    @EnvironmentObject var env: Environment
     @State private var elapsed: Int = 0
     let localStorage = LocalStorage()
+    
+    
     
     var body: some View{
         ZStack{
@@ -22,7 +25,7 @@ struct BreakView : View {
                     .padding(.bottom)
                     .foregroundColor(.accentColor)
                 TimerView(elapsed: elapsed)
-                Text("Time elapsed: \(elapsed)s")
+                Text("Time worked: \(env.workTime)s")
 //                ControlsView(
 //                    isStarted: $isStarted,
 //                    isBreak: $isBreak,
@@ -56,7 +59,7 @@ struct BreakView : View {
 //            }
             .onAppear{
                 print("break view appeared")
-                elapsed = localStorage.readValue(forKey: .workTime) ?? 0
+                elapsed = env.workTime
             }
 //            .onReceive(timer){
 //                time in
